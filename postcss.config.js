@@ -1,10 +1,19 @@
-const postcssPxToViewport8Plugin = require('postcss-px-to-viewport-8-plugin');
+/*
+ * @Description: your description
+ * @Author: lkxian
+ * @@@Email: lkxian888@163.com
+ * @Date: 2022-07-31 20:33:23
+ * @LastEditTime: 2022-08-01 11:19:47
+ */
+const postcssPxToViewport8Plugin = require('postcss-px-to-viewport-8-plugin'); // -8-plugin
 
 module.exports = {
   plugins: [
     postcssPxToViewport8Plugin({
       unitToConvert: 'px', // 需要转换的单位，默认为"px"
-      viewportWidth: 1920, // 设计稿的视口宽度
+      viewportWidth: (file) => {
+        return 1920;
+      }, // 设计稿的视口宽度
       unitPrecision: 5, // 单位转换后保留的精度
       propList: ['*'], // 能转化为vw的属性列表
       viewportUnit: 'vw', // 希望使用的视口单位

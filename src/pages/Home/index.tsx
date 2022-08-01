@@ -1,6 +1,8 @@
 import Nav from '@/components/Nav';
 import React, { FC } from 'react';
 import { Button } from 'antd';
+// import { Button as Btn } from 'antd-mobile';
+import Btn from 'antd-mobile/es/components/button';
 import styles from './index.scss';
 import { useHistory } from 'react-router';
 import map from '@/assets/images/homeBg.png';
@@ -20,6 +22,7 @@ const Home: FC<IndexProps> = () => {
       <Button type="primary" onClick={() => history.push('/detail')}>
         detail 113111465
       </Button>
+      <Btn color="primary">Btn</Btn>
       <img className={styles.imgbg} src={map} alt="" />
       {/* <img className={styles.dlam} src={dlam} alt="" /> */}
       <ThreeCom />
