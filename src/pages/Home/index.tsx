@@ -1,3 +1,11 @@
+/*
+ * @Description: your description
+ * @Author: lkxian
+ * @@Email: lkxian888@163.com
+ * @Date: 2021-09-18 14:39:46
+ * @LastEditTime: 2022-07-06 11:08:00
+ *
+ */
 import Nav from '@/components/Nav';
 import React, { FC } from 'react';
 import { Button } from 'antd';
@@ -10,6 +18,7 @@ import ThreeCom from '@/components/ThreeCom';
 type IndexProps = {
   childer: Node;
 };
+console.log(process.env.NODE_ENV);
 
 const Home: FC<IndexProps> = () => {
   const history = useHistory();
@@ -20,9 +29,9 @@ const Home: FC<IndexProps> = () => {
       <Button type="primary" onClick={() => history.push('/detail')}>
         detail 113111465
       </Button>
-      <img className={styles.imgbg} src={map} alt="" />
+      <div className={styles.imgbg} />
       {/* <img className={styles.dlam} src={dlam} alt="" /> */}
-      <ThreeCom />
+      {/* <ThreeCom /> */}
     </div>
   );
 };

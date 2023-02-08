@@ -13,6 +13,7 @@ export default [
   {
     path: '/',
     name: 'home',
+    redirect: '/detail',
     exact: true,
     component: Home,
   },

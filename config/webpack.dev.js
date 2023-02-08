@@ -3,7 +3,7 @@ const { merge } = require('webpack-merge');
 const commonWebpackConfig = require('./webpack.common');
 const friendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
 const notifier = require('node-notifier');
-
+console.log(process.env.NODE_ENV);
 module.exports = merge(commonWebpackConfig, {
   mode: 'development',
   devtool: 'inline-source-map',
@@ -14,8 +14,8 @@ module.exports = merge(commonWebpackConfig, {
     },
     compress: true,
     open: true,
-    host: process.env.HOST || '0.0.0.0',
-    port: parseInt(process.env.PORT, 10) || 3000,
+    host: process.env.HOST,
+    port: parseInt(process.env.PORT, 10) || 3001,
     hot: true,
     historyApiFallback: true, // 所有的404都到index.html
     proxy: {
@@ -28,7 +28,9 @@ module.exports = merge(commonWebpackConfig, {
   plugins: [
     new friendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
-        messages: [`Your application is running here: http://localhost:3000`],
+        messages: [
+          `Your application is running here: http://localhost:${process.env.PORT || 3001}`,
+        ],
         notes: ['Some additional notes to be displayed upon successful compilation'],
       },
       // 每次都清空控制台
