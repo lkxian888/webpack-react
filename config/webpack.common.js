@@ -67,10 +67,10 @@ module.exports = {
           },
         ],
       },
-      {
-        test: /(\.c|\.le)ss$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
-      },
+      // {
+      //   test: /(\.c|\.le)ss$/,
+      //   use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      // },
       {
         test: /\.scss$/,
         exclude: [resolve('src/styles')],
@@ -92,6 +92,15 @@ module.exports = {
         include: [resolve('src/styles')],
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+      },
+      {
+        test: /\.less$/,
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'less-loader'],
+      },
+
       {
         test: /\.(png|jpe?g|gif|svg)$/i,
         type: 'asset',
@@ -144,6 +153,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'css/[name].css',
     }),
-    new WebpackBar({ color: 'purple' }),
+    new WebpackBar({ color: 'green' }),
   ],
 };

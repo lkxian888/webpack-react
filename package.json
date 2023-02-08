@@ -15,9 +15,9 @@
   },
 
   "devDependencies": {
-    "@babel/core": "^7.15.5",
+    "@babel/core": "^7.18.9",
     "@babel/plugin-transform-runtime": "^7.15.0",
-    "@babel/preset-env": "^7.15.6",
+    "@babel/preset-env": "^7.18.9",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
     "@types/react": "^17.0.21",
@@ -28,7 +28,7 @@
     "@typescript-eslint/parser": "^4.31.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",
-    "babel-plugin-import": "^1.13.3",
+    "babel-plugin-import": "^1.13.5",
     "babel-preset-react-app": "^10.0.0",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "1.0",
@@ -75,6 +75,7 @@
   },
   "dependencies": {
     "antd": "^4.16.13",
+    "antd-mobile": "^5.20.0",
     "axios": "^0.21.4",
     "lkx-cli": "^1.0.3",
     "react": "^17.0.2",

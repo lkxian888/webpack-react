@@ -1,3 +1,10 @@
+/*
+ * @Description: your description
+ * @Author: lkxian
+ * @@@Email: lkxian888@163.com
+ * @Date: 2022-07-31 20:35:59
+ * @LastEditTime: 2022-07-31 20:36:19
+ */
 const path = require('path');
 const { merge } = require('webpack-merge');
 const commonWebpackConfig = require('./webpack.common');
